@@ -1,0 +1,134 @@
+// # Common styles
+// ====================
+
+::selection {
+  color: $white;
+  background: $teal;
+  text-shadow: none;
+}
+
+a {
+  &,
+  &:visited {
+    color: $link-color;
+    text-decoration: $link-decoration;
+  }
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    // outline: 0;
+  }
+}
+
+// # Global styles
+// ====================
+
+html {
+  height: 100%;
+  background: $html-background;
+  color: $html-color;
+}
+
+body {
+  height: 100%;
+  background: $body-background;
+  color: $body-color;
+  // Better Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+// # Wrapper styles
+// ====================
+
+.wrapper {
+  // flex
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+// # Main styles
+// ====================
+
+.main {
+  display: flex;
+  // flex
+  flex: 1;
+}
+
+
+// # Content styles
+// ====================
+
+.content {
+  flex: 1;
+  margin: 0 $content-margin 0 0;
+  overflow: auto;
+  border-top-left-radius: $content-margin * .6;
+  border-top-right-radius: $content-margin * .6;
+  background-color: $content-background;
+  color: $main-darker;
+
+  > .inner {
+    margin: 1rem;
+    overflow: hidden;
+
+    > .heading {
+      margin: 0;
+      padding: 0 0 .25rem .25rem;
+      border-bottom: .0625rem solid darken($content-background, 5%);
+      font-size: 1.25rem;
+      font-weight: normal;
+      line-height: 1.2;
+
+      > .action {
+        display: inline-block;
+        padding: .25rem .35rem;
+        border-radius: .25rem;
+        border: .0625rem solid darken($content-background, 10%);
+        font-size: .75rem;
+        vertical-align: top;
+
+        &:hover {
+          border-color: $link-hover-color;
+          background: $link-hover-color;
+          color: $content-background;
+        }
+      }
+    }
+  }
+}
+
+
+// # Error pages
+// ====================
+
+.error {
+  flex: 1;
+  width: 95%;
+  max-width: 20rem;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: .125rem;
+
+  h1, h2 {
+    font-weight: 300;
+  }
+
+  h1 {
+    margin: 14rem 0 0;
+    font-size: 10rem;
+  }
+
+  footer {
+    margin-top: 5rem;
+    font-size: .75rem;
+  }
+}

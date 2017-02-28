@@ -1,0 +1,39 @@
+{
+  "name": "freedom",
+  "version": "0.1.0",
+  "description": "dashboard pages",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zce/freedom.git"
+  },
+  "keywords": [
+    "dashboard",
+    "zce",
+    "wedn",
+    "wedn.net",
+    "micua",
+    "micua.com"
+  ],
+  "author": "iceStone <ice@micua.com> (http://www.micua.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zce/freedom/issues"
+  },
+  "homepage": "https://github.com/zce/freedom#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-sass": "^3.1.0",
+    "node-xtemplate": "^0.1.5"
+  },
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "bootstrap": "4.0.0-alpha.6",
+    "purecss": "^0.6.2"
+  }
+}
