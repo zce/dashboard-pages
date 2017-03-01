@@ -66,7 +66,7 @@ gulp.task('default', ['font', 'page', 'style', 'script'], () => {
     notify: false,
     startPath: 'pages',
     server: {
-      baseDir: ['dist']
+      baseDir: ['dist', '.']
     }
   })
   gulp.start('watch')

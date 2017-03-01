@@ -7,20 +7,20 @@
   text-shadow: none;
 }
 
-a {
-  &,
-  &:visited {
-    color: $link-color;
-    text-decoration: $link-decoration;
-  }
+// a {
+//   &,
+//   &:visited {
+//     color: $link-color;
+//     text-decoration: $link-decoration;
+//   }
 
-  &:hover,
-  &:focus {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
-    // outline: 0;
-  }
-}
+//   &:hover,
+//   &:focus {
+//     color: $link-hover-color;
+//     text-decoration: $link-hover-decoration;
+//     // outline: 0;
+//   }
+// }
 
 // # Global styles
 // ====================

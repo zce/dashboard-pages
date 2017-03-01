@@ -19,6 +19,14 @@ $(function ($) {
     return false
   })
 
+  $('.login-form > .btn').on('click', function () {
+    $('.alert').fadeIn()
+    $('.login-form').removeClass('animated shake').addClass('animated shake').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      $(this).removeClass('animated shake')
+    })
+    return false
+  })
+
   // function loadContent (path) {
   //   if (!(path.endsWith('/') || path.endsWith('.html'))) {
   //     path += '.html'
