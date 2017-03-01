@@ -41,30 +41,40 @@ $link-decoration:                 none;
 $link-hover-color:                lighten($blue, 10%); // $main-darker;
 $link-hover-decoration:           none;
 
-$html-color:                      $white;
-$html-background:                 $main-darker;
-
-$body-color:                      $white;
-$body-background:                 $main;
-
 $brand-color:                     $gray-lighter;
 $brand-hover-color:               $white;
 
 $menu-item-color:                 $gray-lighter;
 $menu-item-background:            $transparent;
 $menu-item-hover-color:           $teal;
-$menu-item-hover-background:      $main-dark;
+$menu-item-hover-background:      $main-darker;
 $menu-item-active-color:          $white;
 $menu-item-active-background:     $blue;
-$menu-border-background:          $main-darker;
+$menu-title-color:                darken($menu-item-color, 40%);
+$menu-title-background:           $menu-item-hover-background;
+$menu-border-background:          $main-dark;
+
+
+
+$html-color:                      $white;
+$html-background:                 $main-darker;
+
+
+$body-color:                      $white;
+$body-background:                 $main;
 
 $header-height:                   2rem;
 $header-sub-width:                5rem;
 
+
 $sidebar-width:                   10rem;
 $sidebar-min-width:               2.25rem;
 $sidebar-sub-width:               6rem;
-$sidebar-item-height:             2.25rem;
+$sidebar-item-height:             $sidebar-min-width;
+$sidebar-enable-arrow:            true;
+$sidebar-enable-radius:           false;
+
+
 
 $content-margin:                  .3125rem;
 $content-background:              $gray-lighter;

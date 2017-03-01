@@ -35,10 +35,12 @@ gulp.task('page', () => {
 
 gulp.task('style', () => {
   return gulp.src('src/styles/*.scss', { base: 'src' })
+    .pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass({
       outputStyle: 'expanded',
       precision: 10
     }).on('error', plugins.sass.logError))
+    .pipe(plugins.sourcemaps.write('.'))
     .pipe(gulp.dest('dist'))
     // .pipe(browserSync.stream({ match: '**/*.css' }))
     .pipe(browserSync.reload({ stream: true }))
@@ -59,7 +61,7 @@ gulp.task('watch', () => {
 
 gulp.task('default', ['font', 'page', 'style', 'script'], () => {
   browserSync.init({
-    port: 2015,
+    port: 2017,
     open: false,
     notify: false,
     startPath: 'pages',
