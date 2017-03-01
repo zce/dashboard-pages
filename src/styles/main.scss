@@ -36,12 +36,18 @@
 @import 'modules/sidebar';
 
 @import 'pages/login';
+@import 'pages/list';
 
 
 // # Demo styles
 // ====================
 
-.icons i {
-  margin: 1rem;
-  font-size: 2.5rem;
+.icons {
+  width: 100%;
+  word-wrap: break-word;
+
+  i {
+    margin: 1rem;
+    font-size: 2.5rem;
+  }
 }

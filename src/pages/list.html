@@ -2,28 +2,51 @@
 {{set (title = 'List')}}
 
 {{#block ('body')}}
-  <h1 class="heading">文章 <a class="action" href="#">写文章</a></h1>
+  <div class="heading">
+    <h1 class="float-left">文章</h1>
+    <a class="btn btn-outline-info btn-sm float-right icon-before icon-quill" href="#">写文章</a>
+  </div>
   <form>
-    <header class="form-inline">
-      <select class="form-control form-control-sm">
-        <option value="-1">批量操作</option>
-        <option value="edit">编辑</option>
-        <option value="trash">移至回收站</option>
-      </select>
-      <button class="btn btn-secondary btn-sm">应用</button>
-      <select class="form-control form-control-sm">
-        <option value="-1">全部日期</option>
-        <option value="201702">2017年02月</option>
-        <option value="201701">2017年01月</option>
-        <option value="201612">2016年12月</option>
-      </select>
-      <select class="form-control form-control-sm">
-        <option value="-1">所有分类</option>
-        <option value="3">哈哈</option>
-        <option value="2">测试</option>
-        <option value="1">未分类</option>
-      </select>
-      <button class="btn btn-secondary btn-sm">筛选</button>
+    <header>
+      <div class="row">
+        <div class="col mr-auto">
+          <ul class="nav nav-filter">
+            <li class="nav-item"><a class="nav-link active" href="#">全部 (10)</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">已发布 (10)</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">草稿 (10)</a></li>
+            <li class="nav-item"><a class="nav-link disabled" href="#">回收站 (10)</a></li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <div class="input-group input-group-sm">
+            <input type="text" class="form-control" placeholder="搜索文章">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary icon-before icon-search" type="button"></button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="form-inline">
+        <select class="form-control form-control-sm">
+          <option value="-1">批量操作</option>
+          <option value="edit">编辑</option>
+          <option value="trash">移至回收站</option>
+        </select>
+        <button class="btn btn-secondary btn-sm">应用</button>
+        <select class="form-control form-control-sm">
+          <option value="-1">全部日期</option>
+          <option value="201702">2017年02月</option>
+          <option value="201701">2017年01月</option>
+          <option value="201612">2016年12月</option>
+        </select>
+        <select class="form-control form-control-sm">
+          <option value="-1">所有分类</option>
+          <option value="3">哈哈</option>
+          <option value="2">测试</option>
+          <option value="1">未分类</option>
+        </select>
+        <button class="btn btn-secondary btn-sm">筛选</button>
+      </div>
       <div class="pagination">
       </div>
     </header>
