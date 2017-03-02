@@ -14,7 +14,7 @@
 [style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
 [style-url]: http://standardjs.com/
 
-> A dashboard pages
+> A dashboard pages by bootstrap
 
 ## License
 
