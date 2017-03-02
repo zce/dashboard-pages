@@ -1,6 +1,15 @@
-{{extend ('./base.html')}}
-
-{{#block ('wrapper')}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <title>Dashboard « Freedom</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  
+</head>
+<body>
+  <div class="wrapper">
+    
   <header class="header">
     <h1 class="brand">
       <a href="/">WEDN.NET</a>
@@ -144,7 +153,24 @@
       </footer>
     </aside>
     <main class="content">
-      {{{block ('body')}}}
+      
+  <div class="inner">
+    <h1 class="heading">仪表盘</h1>
+  </div>
+
     </main>
   </section>
-{{/block}}
+
+  </div>
+  <script src="../scripts/jquery.js"></script>
+  <script src="../scripts/demo.js"></script>
+  
+</body>
+</html>
+
+
+
+
+
+
+

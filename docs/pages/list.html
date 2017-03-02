@@ -1,6 +1,15 @@
-{{extend ('./base.html')}}
-
-{{#block ('wrapper')}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <title>List « Freedom</title>
+  <link rel="stylesheet" href="../styles/main.css">
+  
+</head>
+<body>
+  <div class="wrapper">
+    
   <header class="header">
     <h1 class="brand">
       <a href="/">WEDN.NET</a>
@@ -144,7 +153,211 @@
       </footer>
     </aside>
     <main class="content">
-      {{{block ('body')}}}
+      
+  <div class="inner">
+    <div class="heading">
+      <h1 class="title">123 篇文章</h1>
+      <ul class="action">
+        <li><a href="#" class="icon-before icon-checkmark"></a></li>
+        <li><a href="#" class="icon-before icon-blocked"></a></li>
+        <li><a href="#" class="icon-before icon-bin"></a></li>
+        <li><a href="#" class="icon-before icon-copy"></a></li>
+      </ul>
+      <div class="search icon-before icon-search">
+        <input type="text" placeholder="搜索">
+      </div>
+      <a href="#" class="new btn btn-outline-primary btn-sm icon-before icon-quill">写文章</a>
+    </div>
+    <table class="table table-hover posts-table">
+      <thead>
+        <tr>
+          <th class="text-center">
+            <input type="checkbox">
+          </th>
+          <th>
+            <span>标题</span>
+            <i class="icon icon-arrow-up2"></i>
+          </th>
+          <th>
+            <span>状态</span>
+            <select>
+              <option value="-1">状态</option>
+              <option value="0">草稿</option>
+              <option value="1">等待审核</option>
+              <option value="2">已发布</option>
+              <option value="3">已取消发布</option>
+            </select>
+          </th>
+          <th>
+            <span>分类</span>
+            <select>
+              <option value="-1">分类</option>
+              <option value="0">未分类</option>
+            </select>
+          </th>
+          <th>
+            <span>标签</span>
+          </th>
+          <th class="text-center">
+            <span>用户</span>
+            <select>
+              <option value="-1">用户</option>
+              <option value="0">zce</option>
+            </select>
+          </th>
+          <th class="text-center">
+            <span>评论</span>
+            <i class="icon icon-arrow-up2"></i>
+          </th>
+          <th class="text-center">
+            <span>日期</span>
+            <i class="icon icon-arrow-up2"></i>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-center">
+            <input type="checkbox">
+          </td>
+          <td>
+            <a href="#">世界，你好！</a>
+          </td>
+          <td class="text-center">
+            <a class="status-0" title="草稿"></a>
+          </td>
+          <td>
+            <a href="#">未分类</a>、<a href="#">测试分类</a>
+          </td>
+          <td>
+            <a href="#">Demo</a>、<a href="#">Test</a>
+          </td>
+          <td class="text-center">
+            <a href="#">zce</a>
+          </td>
+          <td class="text-center">
+            <a class="icon-before icon-bubble2" href="#" title="《世界，你好！》的评论"> 0</a>
+          </td>
+          <td class="text-center">
+            <span>2017年3月2日</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            <input type="checkbox">
+          </td>
+          <td>
+            <a href="#">世界，你好！</a>
+          </td>
+          <td class="text-center">
+            <a class="status-0" title="草稿"></a>
+          </td>
+          <td>
+            <a href="#">未分类</a>、<a href="#">测试分类</a>
+          </td>
+          <td>
+            <a href="#">Demo</a>、<a href="#">Test</a>
+          </td>
+          <td class="text-center">
+            <a href="#">zce</a>
+          </td>
+          <td class="text-center">
+            <a class="icon-before icon-bubble2" href="#" title="《世界，你好！》的评论"> 0</a>
+          </td>
+          <td class="text-center">
+            <span>2017年3月2日</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">
+            <input type="checkbox">
+          </td>
+          <td>
+            <a href="#">世界，你好！</a>
+          </td>
+          <td class="text-center">
+            <a class="status-0" title="草稿"></a>
+          </td>
+          <td>
+            <a href="#">未分类</a>、<a href="#">测试分类</a>
+          </td>
+          <td>
+            <a href="#">Demo</a>、<a href="#">Test</a>
+          </td>
+          <td class="text-center">
+            <a href="#">zce</a>
+          </td>
+          <td class="text-center">
+            <a class="icon-before icon-bubble2" href="#" title="《世界，你好！》的评论"> 0</a>
+          </td>
+          <td class="text-center">
+            <span>2017年3月2日</span>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th class="text-center">
+            <input type="checkbox">
+          </th>
+          <th>
+            <span>标题</span>
+            <i class="icon icon-arrow-up2"></i>
+          </th>
+          <th>
+            <span>状态</span>
+            <select>
+              <option value="-1">状态</option>
+              <option value="0">草稿</option>
+              <option value="1">等待审核</option>
+              <option value="2">已发布</option>
+              <option value="3">已取消发布</option>
+            </select>
+          </th>
+          <th>
+            <span>分类</span>
+            <select>
+              <option value="-1">分类</option>
+              <option value="0">未分类</option>
+            </select>
+          </th>
+          <th>
+            <span>标签</span>
+          </th>
+          <th class="text-center">
+            <span>用户</span>
+            <select>
+              <option value="-1">用户</option>
+              <option value="0">zce</option>
+            </select>
+          </th>
+          <th class="text-center">
+            <span>评论</span>
+            <i class="icon icon-arrow-up2"></i>
+          </th>
+          <th class="text-center">
+            <span>日期</span>
+            <i class="icon icon-arrow-up2"></i>
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
     </main>
   </section>
-{{/block}}
+
+  </div>
+  <script src="../scripts/jquery.js"></script>
+  <script src="../scripts/demo.js"></script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+

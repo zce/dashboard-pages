@@ -29,12 +29,11 @@
     "gulp": "^3.9.1",
     "gulp-load-plugins": "^1.5.0",
     "gulp-sass": "^3.1.0",
-    "node-xtemplate": "^0.1.5"
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-xhtml": "^0.2.0"
   },
   "dependencies": {
     "animate.css": "^3.5.2",
-    "bootstrap": "4.0.0-alpha.6",
-    "gulp-sourcemaps": "^2.4.1",
-    "purecss": "^0.6.2"
+    "bootstrap": "4.0.0-alpha.6"
   }
 }

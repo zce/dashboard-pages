@@ -205,7 +205,7 @@ block-stream@*:
 
 bluebird@^3.4.7:
   version "3.4.7"
-  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.4.7.tgz#f72d760be09b7f76d08ed8fae98b289a8d05fab3"
+  resolved "http://registry.npm.taobao.org/bluebird/download/bluebird-3.4.7.tgz#f72d760be09b7f76d08ed8fae98b289a8d05fab3"
 
 boom@2.x.x:
   version "2.10.1"
@@ -506,15 +506,21 @@ debug-fabulous@0.0.X:
     lazy-debug-legacy "0.0.X"
     object-assign "4.1.0"
 
-debug@2.2.0, debug@^2.2.0, debug@~2.2.0:
+debug@2.2.0, debug@~2.2.0:
   version "2.2.0"
   resolved "http://registry.npm.taobao.org/debug/download/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
   dependencies:
     ms "0.7.1"
 
-debug@2.3.3, debug@2.X:
+debug@2.3.3:
   version "2.3.3"
   resolved "http://registry.npm.taobao.org/debug/download/debug-2.3.3.tgz#40c453e67e6e13c901ddec317af8986cda9eff8c"
+  dependencies:
+    ms "0.7.2"
+
+debug@2.X, debug@^2.2.0:
+  version "2.6.1"
+  resolved "http://registry.npm.taobao.org/debug/download/debug-2.6.1.tgz#79855090ba2c4e3115cc7d8769491d58f0491351"
   dependencies:
     ms "0.7.2"
 
@@ -786,8 +792,8 @@ flagged-respawn@^0.3.2:
   resolved "http://registry.npm.taobao.org/flagged-respawn/download/flagged-respawn-0.3.2.tgz#ff191eddcd7088a675b2610fffc976be9b8074b5"
 
 for-in@^1.0.1:
-  version "1.0.1"
-  resolved "http://registry.npm.taobao.org/for-in/download/for-in-1.0.1.tgz#d6c3e3798ceaaa301047b109dedf1b1ae37a0efa"
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/for-in/download/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
 
 for-own@^0.1.4:
   version "0.1.5"
@@ -1084,6 +1090,13 @@ gulp-util@^3.0, gulp-util@^3.0.0:
     through2 "^2.0.0"
     vinyl "^0.5.0"
 
+gulp-xhtml@^0.2.0:
+  version "0.2.0"
+  resolved "http://registry.npm.taobao.org/gulp-xhtml/download/gulp-xhtml-0.2.0.tgz#8912721a21f5a6642c788354f6fcc8144a2c82e0"
+  dependencies:
+    node-xtemplate "^0.1.5"
+    through2 "^2.0.3"
+
 gulp@^3.9.1:
   version "3.9.1"
   resolved "http://registry.npm.taobao.org/gulp/download/gulp-3.9.1.tgz#571ce45928dd40af6514fc4011866016c13845b4"
@@ -1197,7 +1210,7 @@ http-signature@~1.1.0:
 
 iconv-lite@^0.4.15:
   version "0.4.15"
-  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.15.tgz#fe265a218ac6a57cfe854927e9d04c19825eddeb"
+  resolved "http://registry.npm.taobao.org/iconv-lite/download/iconv-lite-0.4.15.tgz#fe265a218ac6a57cfe854927e9d04c19825eddeb"
 
 immutable@3.8.1, immutable@^3.7.6:
   version "3.8.1"
@@ -1836,7 +1849,7 @@ node-uuid@~1.4.7:
 
 node-xtemplate@^0.1.5:
   version "0.1.5"
-  resolved "https://registry.yarnpkg.com/node-xtemplate/-/node-xtemplate-0.1.5.tgz#1a8506fcecbf698714b8b8b1ee9e909312c10f44"
+  resolved "http://registry.npm.taobao.org/node-xtemplate/download/node-xtemplate-0.1.5.tgz#1a8506fcecbf698714b8b8b1ee9e909312c10f44"
   dependencies:
     bluebird "^3.4.7"
     iconv-lite "^0.4.15"
@@ -2088,10 +2101,6 @@ punycode@^1.4.1:
   version "1.4.1"
   resolved "http://registry.npm.taobao.org/punycode/download/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
-purecss@^0.6.2:
-  version "0.6.2"
-  resolved "http://registry.npm.taobao.org/purecss/download/purecss-0.6.2.tgz#f0827d227e909543c5138f36d56c8c613f476b8c"
-
 qs@0.4.x:
   version "0.4.2"
   resolved "http://registry.npm.taobao.org/qs/download/qs-0.4.2.tgz#3cac4c861e371a8c9c4770ac23cda8de639b8e5f"
@@ -2228,32 +2237,7 @@ replace-ext@0.0.1:
   version "0.0.1"
   resolved "http://registry.npm.taobao.org/replace-ext/download/replace-ext-0.0.1.tgz#29bbd92078a739f0bcce2b4ee41e837953522924"
 
-request@2, request@2.78.0, request@^2.61.0:
-  version "2.78.0"
-  resolved "http://registry.npm.taobao.org/request/download/request-2.78.0.tgz#e1c8dec346e1c81923b24acdb337f11decabe9cc"
-  dependencies:
-    aws-sign2 "~0.6.0"
-    aws4 "^1.2.1"
-    caseless "~0.11.0"
-    combined-stream "~1.0.5"
-    extend "~3.0.0"
-    forever-agent "~0.6.1"
-    form-data "~2.1.1"
-    har-validator "~2.0.6"
-    hawk "~3.1.3"
-    http-signature "~1.1.0"
-    is-typedarray "~1.0.0"
-    isstream "~0.1.2"
-    json-stringify-safe "~5.0.1"
-    mime-types "~2.1.7"
-    node-uuid "~1.4.7"
-    oauth-sign "~0.8.1"
-    qs "~6.3.0"
-    stringstream "~0.0.4"
-    tough-cookie "~2.3.0"
-    tunnel-agent "~0.4.1"
-
-request@^2.79.0:
+request@2, request@^2.61.0, request@^2.79.0:
   version "2.79.0"
   resolved "http://registry.npm.taobao.org/request/download/request-2.79.0.tgz#4dfe5bf6be8b8cdc37fcf93e04b65577722710de"
   dependencies:
@@ -2277,6 +2261,31 @@ request@^2.79.0:
     tough-cookie "~2.3.0"
     tunnel-agent "~0.4.1"
     uuid "^3.0.0"
+
+request@2.78.0:
+  version "2.78.0"
+  resolved "http://registry.npm.taobao.org/request/download/request-2.78.0.tgz#e1c8dec346e1c81923b24acdb337f11decabe9cc"
+  dependencies:
+    aws-sign2 "~0.6.0"
+    aws4 "^1.2.1"
+    caseless "~0.11.0"
+    combined-stream "~1.0.5"
+    extend "~3.0.0"
+    forever-agent "~0.6.1"
+    form-data "~2.1.1"
+    har-validator "~2.0.6"
+    hawk "~3.1.3"
+    http-signature "~1.1.0"
+    is-typedarray "~1.0.0"
+    isstream "~0.1.2"
+    json-stringify-safe "~5.0.1"
+    mime-types "~2.1.7"
+    node-uuid "~1.4.7"
+    oauth-sign "~0.8.1"
+    qs "~6.3.0"
+    stringstream "~0.0.4"
+    tough-cookie "~2.3.0"
+    tunnel-agent "~0.4.1"
 
 require-directory@^2.1.1:
   version "2.1.1"
@@ -2338,13 +2347,13 @@ sass-graph@^2.1.1:
     lodash "^4.0.0"
     yargs "^4.7.1"
 
-"semver@2 || 3 || 4 || 5", semver@~5.3.0:
-  version "5.3.0"
-  resolved "http://registry.npm.taobao.org/semver/download/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
-
-"semver@2.x || 3.x || 4 || 5", semver@^4.1.0:
+"semver@2 || 3 || 4 || 5", "semver@2.x || 3.x || 4 || 5", semver@^4.1.0:
   version "4.3.6"
   resolved "http://registry.npm.taobao.org/semver/download/semver-4.3.6.tgz#300bc6e0e86374f7ba61068b5b1ecd57fc6532da"
+
+semver@~5.3.0:
+  version "5.3.0"
+  resolved "http://registry.npm.taobao.org/semver/download/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
 
 send@0.14.1:
   version "0.14.1"
@@ -2505,8 +2514,8 @@ spdx-license-ids@^1.0.2:
   resolved "http://registry.npm.taobao.org/spdx-license-ids/download/spdx-license-ids-1.2.2.tgz#c9df7a3424594ade6bd11900d596696dc06bac57"
 
 sshpk@^1.7.0:
-  version "1.10.2"
-  resolved "http://registry.npm.taobao.org/sshpk/download/sshpk-1.10.2.tgz#d5a804ce22695515638e798dbe23273de070a5fa"
+  version "1.11.0"
+  resolved "http://registry.npm.taobao.org/sshpk/download/sshpk-1.11.0.tgz#2d8d5ebb4a6fab28ffba37fa62a90f4a3ea59d77"
   dependencies:
     asn1 "~0.2.3"
     assert-plus "^1.0.0"
@@ -2625,7 +2634,7 @@ tfunk@^3.0.1:
     chalk "^1.1.1"
     object-path "^0.9.0"
 
-through2@2.X, through2@^2.0.0:
+through2@2.X, through2@^2.0.0, through2@^2.0.3:
   version "2.0.3"
   resolved "http://registry.npm.taobao.org/through2/download/through2-2.0.3.tgz#0004569b37c7c74ba39c43f3ced78d1ad94140be"
   dependencies:
@@ -2844,7 +2853,7 @@ xmlhttprequest-ssl@1.5.3:
 
 xtemplate@^4.6.0:
   version "4.6.0"
-  resolved "https://registry.yarnpkg.com/xtemplate/-/xtemplate-4.6.0.tgz#ba13a44bfca2161d35dbb06873b36f7795c9f5cf"
+  resolved "http://registry.npm.taobao.org/xtemplate/download/xtemplate-4.6.0.tgz#ba13a44bfca2161d35dbb06873b36f7795c9f5cf"
   dependencies:
     escape-html "~1.0.3"
 

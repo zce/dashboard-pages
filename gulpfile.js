@@ -6,21 +6,11 @@
  */
 
 const gulp = require('gulp')
-const through = require('through2')
-const xtpl = require('node-xtemplate')
 const gulpLoadPlugins = require('gulp-load-plugins')
 const browserSync = require('browser-sync').create()
 const plugins = gulpLoadPlugins()
 
 const dist = 'docs'
-
-const xhtml = () => through.obj((file, encoding, callback) => {
-  xtpl.render(file.path, {}, (err, content) => {
-    if (err) return callback(err)
-    file.contents = new Buffer(content)
-    callback(null, file)
-  })
-})
 
 gulp.task('font', () => {
   return gulp.src('src/fonts/*.*', { base: 'src' })
@@ -30,7 +20,7 @@ gulp.task('font', () => {
 
 gulp.task('page', () => {
   return gulp.src('src/pages/*.html', { base: 'src' })
-    .pipe(xhtml())
+    .pipe(plugins.xhtml())
     .pipe(gulp.dest(dist))
     .pipe(browserSync.reload({ stream: true }))
 })
@@ -44,7 +34,6 @@ gulp.task('style', () => {
     }).on('error', plugins.sass.logError))
     .pipe(plugins.sourcemaps.write('.'))
     .pipe(gulp.dest(dist))
-    // .pipe(browserSync.stream({ match: '**/*.css' }))
     .pipe(browserSync.reload({ stream: true }))
 })
 
