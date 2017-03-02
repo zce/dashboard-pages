@@ -12,6 +12,8 @@ const gulpLoadPlugins = require('gulp-load-plugins')
 const browserSync = require('browser-sync').create()
 const plugins = gulpLoadPlugins()
 
+const dist = 'docs'
+
 const xhtml = () => through.obj((file, encoding, callback) => {
   xtpl.render(file.path, {}, (err, content) => {
     if (err) return callback(err)
@@ -22,14 +24,14 @@ const xhtml = () => through.obj((file, encoding, callback) => {
 
 gulp.task('font', () => {
   return gulp.src('src/fonts/*.*', { base: 'src' })
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(dist))
     .pipe(browserSync.reload({ stream: true }))
 })
 
 gulp.task('page', () => {
   return gulp.src('src/pages/*.html', { base: 'src' })
     .pipe(xhtml())
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(dist))
     .pipe(browserSync.reload({ stream: true }))
 })
 
@@ -41,14 +43,14 @@ gulp.task('style', () => {
       precision: 10
     }).on('error', plugins.sass.logError))
     .pipe(plugins.sourcemaps.write('.'))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(dist))
     // .pipe(browserSync.stream({ match: '**/*.css' }))
     .pipe(browserSync.reload({ stream: true }))
 })
 
 gulp.task('script', () => {
   return gulp.src('src/scripts/*.js', { base: 'src' })
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(dist))
     .pipe(browserSync.reload({ stream: true }))
 })
 
@@ -66,7 +68,7 @@ gulp.task('default', ['font', 'page', 'style', 'script'], () => {
     notify: false,
     startPath: 'pages',
     server: {
-      baseDir: ['dist', '.']
+      baseDir: [dist, '.']
     }
   })
   gulp.start('watch')
