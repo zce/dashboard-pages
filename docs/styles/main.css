@@ -6780,13 +6780,23 @@ body {
   font-size: .875rem;
 }
 
-.posts-table thead th {
+.posts-table thead th,
+.posts-table tfoot th {
+  position: relative;
   font-weight: 300;
+  font-size: .8125rem;
   border-bottom: 0;
 }
 
-.posts-table tfoot th {
-  font-weight: 300;
+.posts-table thead th select,
+.posts-table tfoot th select {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 
 .error {
