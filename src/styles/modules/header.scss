@@ -25,7 +25,6 @@
 
   > .toolbar {
     display: flex;
-    justify-content: space-between;
     flex: 1;
 
     > .list {
@@ -51,7 +50,7 @@
           > img {
             max-width: ($header-height / 2);
             max-height: ($header-height / 2);
-            margin-top: -.125rem;
+            margin-top: -.25rem;
             background: $menu-image-background;
             border: $menu-image-border;
             vertical-align: middle;
@@ -106,6 +105,8 @@
       }
 
       &:last-child {
+        margin-left: auto;
+
         > .item {
           > .list {
             right: 0;
@@ -114,5 +115,11 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .header > .toolbar > .list:first-child {
+    display: none;
   }
 }
