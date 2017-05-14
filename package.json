@@ -1,17 +1,17 @@
 {
-  "name": "freedom",
+  "name": "reborn",
   "version": "0.1.0",
-  "description": "dashboard pages",
+  "description": "reborn pages",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "dev": "gulp"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zce/freedom.git"
   },
   "keywords": [
-    "dashboard",
+    "reborn",
     "zce",
     "wedn",
     "wedn.net",
@@ -31,5 +31,6 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-xhtml": "^0.2.0"
-  }
+  },
+  "dependencies": {}
 }

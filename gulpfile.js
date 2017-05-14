@@ -1,10 +1,3 @@
-/*
- * @Author: iceStone
- * @Date:   2015-08-31 11:40:15
- * @Last Modified by:   iceStone
- * @Last Modified time: 2015-12-30 22:10:58
- */
-
 const gulp = require('gulp')
 const gulpLoadPlugins = require('gulp-load-plugins')
 const browserSync = require('browser-sync').create()
@@ -12,21 +5,15 @@ const plugins = gulpLoadPlugins()
 
 const dist = 'docs'
 
-gulp.task('font', () => {
-  return gulp.src('src/fonts/*.*', { base: 'src' })
-    .pipe(gulp.dest(dist))
-    .pipe(browserSync.reload({ stream: true }))
-})
-
 gulp.task('page', () => {
-  return gulp.src('src/pages/*.html', { base: 'src' })
+  return gulp.src('src/*.html', { base: 'src' })
     .pipe(plugins.xhtml())
     .pipe(gulp.dest(dist))
     .pipe(browserSync.reload({ stream: true }))
 })
 
 gulp.task('style', () => {
-  return gulp.src('src/styles/*.scss', { base: 'src' })
+  return gulp.src('src/**/*.scss', { base: 'src' })
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass({
       outputStyle: 'expanded',
@@ -38,24 +25,29 @@ gulp.task('style', () => {
 })
 
 gulp.task('script', () => {
-  return gulp.src('src/scripts/*.js', { base: 'src' })
+  return gulp.src('src/**/*.js', { base: 'src' })
+    .pipe(gulp.dest(dist))
+    .pipe(browserSync.reload({ stream: true }))
+})
+
+gulp.task('extra', () => {
+  return gulp.src('src/**/*.{woff,woff2,eot,ttf,otf,svg,png,jpg,jpeg,gif}', { base: 'src' })
     .pipe(gulp.dest(dist))
     .pipe(browserSync.reload({ stream: true }))
 })
 
 gulp.task('watch', () => {
   gulp.watch('src/**/*.html', ['page'])
-  gulp.watch('src/fonts/**/*.*', ['font'])
-  gulp.watch('src/styles/**/*.scss', ['style'])
-  gulp.watch('src/scripts/**/*.js', ['script'])
+  gulp.watch('src/**/*.{woff,woff2,eot,ttf,otf,svg,png,jpg,jpeg,gif}', ['extra'])
+  gulp.watch('src/**/*.scss', ['style'])
+  gulp.watch('src/**/*.js', ['script'])
 })
 
-gulp.task('default', ['font', 'page', 'style', 'script'], () => {
+gulp.task('default', ['extra', 'page', 'style', 'script'], () => {
   browserSync.init({
-    port: 2017,
+    port: 9000,
     open: false,
     notify: false,
-    startPath: 'pages',
     server: {
       baseDir: [dist, '.']
     }
