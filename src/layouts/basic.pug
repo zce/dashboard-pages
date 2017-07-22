@@ -1,0 +1,35 @@
+-
+  let title = 'Layout'
+  let description = 'Hello world'
+  let keywords = 'wedn, wedn.net, zce'
+  let author = 'zce <w@zce.me> (https://zce.me)'
+  let generator = 'WEDN.NET'
+
+block global
+
+doctype html
+html(lang="zh-CN")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="description", content=description)
+    meta(name="keywords", content=keywords)
+    meta(name="author", content=author)
+    meta(name="generator", content=generator)
+
+    title #{ title } &laquo; WEDN.NET | MAKE IT BETTER!
+
+    link(rel="apple-touch-icon", href="../assets/img/icon.png")
+    link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Exo+2:400,500&amp;subset=latin-ext")
+    link(rel="stylesheet", href="../assets/css/main.css")
+
+    block styles
+
+  body
+
+    block body
+
+    script(src="../assets/js/global.js")
+
+    block scripts

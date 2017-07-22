@@ -1,0 +1,30 @@
+extends ../layouts/basic
+
+block global
+
+  - title = 'Sign in'
+
+block body
+  .login
+    header
+      h1: a(href="/") WEDN.NET
+    .alert.alert-secondary
+      button.close(data-dismiss="alert",aria-label="Close"): span(aria-hidden="true") &times;
+      span message
+    form
+      .form-group
+        label(for="login") Username or email
+        input#login.form-control(type="text", name="login")
+        small.form-text.text-muted(style="display:none") Username or email is Required.
+      .form-group
+        label(for="password") Password
+        input#password.form-control(type="text", name="password")
+        small.form-text.text-muted(style="display:none") Password is Required.
+      .d-flex.align-items-end
+        label.custom-control.custom-checkbox
+          input#remember.custom-control-input(type="checkbox", name="remember")
+          i.custom-control-indicator
+          span Remember Me
+        button.btn.btn-secondary.ml-auto Sign in
+    footer.mt-3
+      p ← 返回到 #[a(href="/") WEDN.NET]
